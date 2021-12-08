@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PorPaisComponent } from '../../pais_module/pages/por-pais/por-pais.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,5 +12,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

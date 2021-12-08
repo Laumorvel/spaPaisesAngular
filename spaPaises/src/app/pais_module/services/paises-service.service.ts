@@ -15,6 +15,7 @@ export class PaisesServiceService {
 
   buscarPaises(busqueda:string){//desde el componente por-pais le pasamos el nombre buscado y devolverá todo aquello que encaje con la búsqueda
     //La url que he buscado en thunderClient es https://restcountries.com/v3.1/name/{name}.
+   //En este caso, al necesitar solo el nombre, no creo un objeto params.
     this.httpClient.get<SearchRESTCountries>(this.url_base + busqueda).subscribe(
       (resp) =>{
         console.log(resp);
