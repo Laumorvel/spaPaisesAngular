@@ -10,19 +10,15 @@ export class PaisesServiceService {
   constructor(private httpClient:HttpClient) { }
 
   //VARIABLES PARA LA PETICIÓN
-  url_base:string="https://restcountries.com/alpha/"; //para que nos vaya sacando info de los caracteres que vayamos introduciendo
-  resultado: Name[] = [];
+  url_base:string="https://restcountries.com/v3.1/name/"; //para que nos vaya sacando info de los caracteres que vayamos introduciendo
+  resultado: any = null;
 
   buscarPaises(busqueda:string){//desde el componente por-pais le pasamos el nombre buscado y devolverá todo aquello que encaje con la búsqueda
-
-    const params = new HttpParams()
-    .set('q', busqueda);
-
-    //La url que he buscado en thunderClient es https://restcountries.com/v2/all.
-    this.httpClient.get<SearchRESTCountries>(this.url_base, {params:params}).subscribe(
+    //La url que he buscado en thunderClient es https://restcountries.com/v3.1/name/{name}.
+    this.httpClient.get<SearchRESTCountries>(this.url_base + busqueda).subscribe(
       (resp) =>{
         console.log(resp);
-       this.resultado = resp.name;
+       this.resultado = resp;
       }
     )
   }
