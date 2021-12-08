@@ -1,4 +1,4 @@
-<table class="table table-hover">
+<table class="table table-hover Busqueda">
   <thead>
       <tr>
           <th> # </th>
@@ -9,7 +9,7 @@
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let pais of listPaises; let indice=index"> <!-- Esto es lo que tenemos que repetir por cada país que encuentre -->
+      <tr *ngFor="let pais of listaPaises; let indice=index"> <!-- Esto es lo que tenemos que repetir por cada país que encuentre -->
           <td>{{indice}}</td> <!-- Aquí obtendremos el número de resultado -->
           <td>
               <img class="small-flag" [src]="" > <!-- Aquí obtendremos la url de la bandera -->

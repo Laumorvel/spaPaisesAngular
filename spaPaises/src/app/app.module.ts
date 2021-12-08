@@ -6,19 +6,23 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
 import { SidebarComponent } from './shared-module/sidebar/sidebar.component';
 import { PaisModule } from './pais_module/pais.module';
 import { PorPaisComponent } from './pais_module/pages/por-pais/por-pais.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VerPaisComponent } from './pais_module/pages/ver-pais/ver-pais.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    PorPaisComponent
+    PorPaisComponent,
+    VerPaisComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModuleModule,
-    PaisModule
+    PaisModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

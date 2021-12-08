@@ -10,8 +10,7 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 @NgModule({
   declarations: [
     PorCapitalComponent,
-    PorRegionComponent,
-    VerPaisComponent
+    PorRegionComponent
   ],
   imports: [
     CommonModule
