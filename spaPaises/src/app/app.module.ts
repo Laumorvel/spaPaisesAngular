@@ -8,6 +8,7 @@ import { PaisModule } from './pais_module/pais.module';
 import { PorPaisComponent } from './pais_module/pages/por-pais/por-pais.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VerPaisComponent } from './pais_module/pages/ver-pais/ver-pais.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VerPaisComponent } from './pais_module/pages/ver-pais/ver-pais.componen
     AppRoutingModule,
     SharedModuleModule,
     PaisModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
